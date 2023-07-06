@@ -118,7 +118,7 @@ app.post("/api/users/:_id/exercises", (req, res) => {
   let _id = req.params._id;
   if (!date) {
     date = new Date();
-    date.setDate(date.getDate() + 1);
+    date.setDate(date.getDate());
   } else {
     date = new Date(`${date}T00:00:00`);
   }
